@@ -1,0 +1,217 @@
+/* Настройки кроссбраузерности */
+
+/* Нормализация стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Запрет на изменение размера некоторых элементов при наведении */
+a,
+button,
+input[type="button"],
+input[type="submit"] {
+  resize: none;
+}
+
+/* Настройка адаптивности */
+
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Ширина контейнера на больших экранах */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}
+
+/* Ширина контейнера на средних экранах */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+/* Ширина контейнера на маленьких экранах */
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+
+/* Стили для шапки */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: dimgray;
+}
+.button:hover {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 25px;
+  transition-duration: 0.3s;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+a:hover {
+  color: #4CAF50;
+  text-decoration: underline;
+  transition-duration: 0.3s;
+}
+h1 {
+  animation-name: fade-in;
+  animation-duration: 1s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #4CAF50;
+  transition-duration: 0.3s;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  color: #555;
+  text-align: center;
+  padding: 20px;
+  z-index: 999;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  z-index: 999;
+}
+
+.back-to-top:hover {
+  background-color: #555;
+}
+
+/* Show the button when the user scrolls down 20px from the top of the document */
+@media (min-width: 768px) {
+  .back-to-top.show {
+    display: block;
+  }
+}
+
+#recipes {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.recipe {
+  width: 400px;
+  margin: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.recipe h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.recipe img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipe p {
+  margin: 20px;
+  line-height: 1.5;
+}
+
+.recipe ul, .recipe ol {
+  margin: 20px;
+  padding-left: 40px;
+}
+
+.recipe li {
+  margin-bottom: 10px;
+}
+
+.recipe li::before {
+  content: "•";
+  color: #f69c55;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1px;
+}
+img {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  border: 1px solid #ccc;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
